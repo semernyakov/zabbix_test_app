@@ -37,8 +37,8 @@ docker run --name zabbix-server-1 -p 80:80 -p 10051:10051 -d zabbix/zabbix-appli
 docker run --name zabbix-server-2 -p 80:80 -p 10052:10052 -d zabbix/zabbix-appliance:ubuntu-latest
 ```
 ## Авторизация
-Открываем, браузер на тех портах где крутятся zabbix-server-1 и zabbix-server-2, порты прописаны в ./config.py в
-переменной ip_server_list = ['172.17.0.3', '172.17.0.4'], у вас они могут быть иными
+Открываем, браузер на тех портах где крутятся zabbix-server-1 и zabbix-server-2, порты прописаны в ./config.py 
+переменная ip_server_list = ['172.17.0.3', '172.17.0.4'], у вас они могут быть иными
 Логин-Пароль: Admin:zabbix
 
 ## Коммандная строка
