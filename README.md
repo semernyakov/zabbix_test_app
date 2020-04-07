@@ -41,16 +41,18 @@ docker run --name zabbix-server-2 -p 80:80 -p 10052:10052 -d zabbix/zabbix-appli
 
 ## Коммандная строка
 
-Консоль docker
+Справочно! bash for docker
 ```bash
 docker exec -ti zabbix-server-1 /bin/bash
 docker exec -ti zabbix-server-2 /bin/bash
 ```
 
-## Автоматическое создание фай ковых данных
+## Автоматическое создание фейковых данных
 ```bash
-python ./zabbix_test/inithosts.py
+python ./inithosts.py
 ```
+
+После выполнения проверьте, появились ли данные в административных интерфейсах Zabbix?
 
 ## Настройки
 см ./zabbix_test/config.py
@@ -63,10 +65,15 @@ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 node -v 
 ```
+
 Запускаем фронт
 ```bash
-cd ./zabbix_test/vueapp
+cd ./front
 yarn install
 yarn serve
 ```
-Подробности: vueapp/README.md
+Подробности: front/README.md
+
+P.S. front целесообразно запускать если поднят бек и созданны фековые узлы; поиск дубликатов осуществляется, только по
+двум полям 'name' и 'host' в интейрфейсах узлов; обязательно посмотрите фаил ./config.py
+
