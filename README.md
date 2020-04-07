@@ -5,7 +5,7 @@
  ## Базовая архитектура
 
  * Python 3.7 - Без комментариев, https://www.python.org/downloads/
- * Portainer - Управляйте Docker средами с через веб-интерфейс https://www.portainer.io/installation
+ * Portainer - Управление Docker средами через веб-интерфейс https://www.portainer.io/installation
  * Pipenv - Управление виртуальными окружением Python https://pipenv.pypa.io/en/latest/
  * Docker - Контейнерная виртуализация https://docs.docker.com/install/
  * Zabbix - Система мониторинга https://www.zabbix.com/documentation/current/ru/manual/installation 
@@ -36,7 +36,9 @@ docker run -d -p 8655:8655 -p 9000:9000 --name=portainer --restart=always -v /va
 docker run --name zabbix-server-1 -p 80:80 -p 10051:10051 -d zabbix/zabbix-appliance:ubuntu-latest
 docker run --name zabbix-server-2 -p 80:80 -p 10052:10052 -d zabbix/zabbix-appliance:ubuntu-latest
 ```
-## Авторизация в веб-интерфейсе
+## Авторизация
+Открываем, браузер на тех портах где крутятся zabbix-server-1 и zabbix-server-2, порты прописаны в ./config.py в
+переменной ip_server_list = ['172.17.0.3', '172.17.0.4'], у вас они могут быть иными
 Логин-Пароль: Admin:zabbix
 
 ## Коммандная строка
