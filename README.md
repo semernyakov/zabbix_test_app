@@ -19,14 +19,14 @@ NB: приложение тестировалось на Zabbix API Version 4.4.
 ```bash
 pipenv install
 ```
-## Установка и запуск контейнера с образом Portainer 
+## Установка и запуск контейнера с образом Portainer - Опционально!
 
  ```bash
 docker volume create portainer_data
 docker run -d -p 8655:8655 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 ```
 
-Открываем в браузере http://127.0.0.1:9000/ (http://locahost:9000/) и создаём нового пользователяб полсе авторизации вы можете полноценно 
+Открываем в браузере http://127.0.0.1:9000/ (http://locahost:9000/) и создаём нового пользователя полсе авторизации вы можете полноценно 
 управлять вашими Docker resources (containers, images, volumes, networks ...)
 
 ## Установка и запуск образа Zabbix appliance 4.4
@@ -74,6 +74,6 @@ yarn serve
 ```
 Подробности: front/README.md
 
-P.S. front целесообразно запускать если поднят бек и созданны фековые узлы; поиск дубликатов осуществляется, только по
+P.S. front целесообразно запускать если поднят бек и созданны фейковые узлы; поиск дубликатов осуществляется, только по
 двум полям 'name' и 'host' в интейрфейсах узлов; обязательно посмотрите фаил ./config.py
 
