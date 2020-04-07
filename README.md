@@ -69,7 +69,8 @@ sudo apt-get install -y nodejs
 node -v 
 ```
 
-Запускаем фронт
+Запускаем фронт, у меня фронт запускаетя на http://localhost:8081, если у вас фронт запустится, на дрогом адресе,
+не забудьте, добавть ваш адрес в ./config.py переменная defaults_cors
 ```bash
 cd ./front
 yarn install
