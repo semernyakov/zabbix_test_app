@@ -49,13 +49,13 @@ docker exec -ti zabbix-server-2 /bin/bash
 
 ## Автоматическое создание фейковых данных
 ```bash
-python ./inithosts.py
+python ./inithost.py
 ```
 
 После выполнения проверьте, появились ли данные в административных интерфейсах Zabbix?
 
 ## Настройки
-см ./zabbix_test/config.py
+см ./config.py
 
 ## Разварачиваем фронт
 
